@@ -3,9 +3,11 @@ library(igraph)
 library(tm)
 
 #get example
-b = read.graph(file = my_path, "gml")
-my_names = names(neighbors(graph = b, v = 149))
+#b = read.graph(file = my_path, "gml")
+#my_names = names(neighbors(graph = b, v = 149))
 #my_names = names(neighbors(graph = b, v = 482 ))
+
+my_names = readLines("test_names.txt")
 
 #prepare stopwords
 my_stopwords = tm::stopwords(kind = "en")
